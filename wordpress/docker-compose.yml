@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+
+  mywordpress:
+    image: wordpress:php7.4
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 9012:80
+    environment:
+      WORDPRESS_DB_HOST: "db:3306"
+      WORDPRESS_DB_USER: "whale"
+      WORDPRESS_DB_PASSWORD: "!My7xJ(!d~z9Mw&Sw=uN"
+      WORDPRESS_DB_NAME: "wpdb"
+    volumes:
+      - wordpress-volume:/var/www/html
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: "wpdb"
+      MYSQL_USER: "whale"
+      MYSQL_PASSWORD: "!My7xJ(!d~z9Mw&Sw=uN"
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db-vol:/var/lib/mysql
+
+volumes:
+  wordpress-volume:
+  db-vol:
