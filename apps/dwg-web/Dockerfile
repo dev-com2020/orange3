@@ -5,10 +5,10 @@ FROM nginx:1.21.6
 LABEL maintainer="Damian Naprawa <damian@szkoladockera.pl>"
 # Ustaw etykietę maintainer
 
-RUN apt-get update && apt-get install --no-install-recommends -y procps=3.2.8 \
+RUN apt-get update && apt-get install --no-install-recommends -y procps \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
- && mkdir /usr/moj/katalog
+ && mkdir -p /usr/moj/katalog
 # Uruchom dowolne polecenie, które jest możliwe w obrazie bazowym
 
 # Podczas budowania obraz:
