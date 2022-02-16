@@ -1,9 +1,9 @@
-version: "3.7"
+version: "3.9"
 
 services:
   frontend:
     build:
-      context: "../apps/2048"
+      context: "../apps/dwg-web"
     ports:
       - "8888:80"  
   ngrok:
