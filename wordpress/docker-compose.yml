@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
 
-  mywordpress:
+  wordpress:
     image: wordpress:php7.4
     restart: always
     depends_on:

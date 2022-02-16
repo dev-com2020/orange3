@@ -2,7 +2,8 @@ version: "3.9"
 
 services:
 
-  mywordpress:
+  wordpress:
+    container_name: wordpress
     image: wordpress:php7.4
     # image: wordpress:php8.1
     restart: always
@@ -19,19 +20,22 @@ services:
       - /var/wordpress/data:/var/www/html
 
   db:
+    container_name: mysql-db
     image: mysql:5.7
     restart: always
     environment:
       MYSQL_DATABASE: "wpdb"
       MYSQL_USER: "whale"
       MYSQL_PASSWORD: "!My7xJ(!d~z9Mw&Sw=uN"
+      MYSQL_ROOT_PASSWORD: "rootpassword123"
     volumes:
       - /var/mysql/data:/var/lib/mysql
 
   phpmyadmin:
+    container_name: phpmyadmin
     image: phpmyadmin/phpmyadmin:5.1.3
     restart: always
     ports:
-      - 127.0.0.1:8080:80
+      - 127.0.0.1:8085:80
     environment:
       - PMA_HOST=db   
