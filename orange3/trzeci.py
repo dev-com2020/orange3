@@ -1,0 +1,5 @@
+a = int(input("Wprowadź liczbę a:"))
+b = int(input("Wprowadź liczbę b:"))
+# print("Suma liczb wynosi:", int(a) + int(b))
+print("Suma liczb wynosi:", a + b)
+input("Aby zakończyć program, wciśnij ENTER!")
