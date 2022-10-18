@@ -21,3 +21,13 @@ print(slownik.values())
 
 szukam_Tomka = [klucz for klucz, wartosc in slownik.items() if wartosc == "Tomek"]
 print(szukam_Tomka, "🥳")
+
+lista = [i for i in range(5)]
+print(lista)
+
+liczby = ["1", 2, '4', '5']
+liczby2 = [int(i) for i in liczby]
+print(liczby2)
+
+slownik2 = {1: "Tomek", 2: "Jarek", 3: "Aga"}
+print({wartosc: klucz for klucz, wartosc in slownik2.items()})
