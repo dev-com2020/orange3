@@ -14,7 +14,10 @@ print(slownik.items())
 print(slownik.keys())
 print(slownik.values())
 
-if "rok" in slownik:
-    print(slownik["rok"])
-if "rok2" not in slownik:
-    print("Nie znaleziono klucza o wartości rok2")
+# if "rok" in slownik:
+#     print(slownik["rok"])
+# if "rok2" not in slownik:
+#     print("Nie znaleziono klucza o wartości rok2")
+
+szukam_Tomka = [klucz for klucz, wartosc in slownik.items() if wartosc == "Tomek"]
+print(szukam_Tomka, "🥳")
