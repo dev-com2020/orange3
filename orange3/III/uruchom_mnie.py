@@ -43,3 +43,10 @@ orzel.lataj()
 
 kura2 = p2.Kura('kura2')
 kura2.lataj()
+
+pingwin = p2.Pingwin("pingwin")
+pingwin.lataj()
+pingwin.wydajOdglos()
+
+print(pingwin.formatowanie())
+print(p2.Pingwin("pingwin2").formatowanie())
